@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <p id="title">BLYTHE BAO</p>
+    <router-link to="/">Home</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -12,12 +13,27 @@ export default {
 </script>
 
 <style>
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: #EEEEEE;
+}
+
+#title{
+  height: 60px;
+  line-height: 60px;
+  background-color: #FFF;
+}
+
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
