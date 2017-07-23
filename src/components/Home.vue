@@ -7,6 +7,7 @@
         {{list.name}}
       </router-link>
     </div>
+    <router-view></router-view> 
   </div>
 </template>
 
@@ -18,21 +19,21 @@ export default {
       linklist: [
         {
           name:'Createjs小游戏',
-          link:'/createjs',
+          link:'/home/createjs',
           imgsrc:require('../assets/image/p1.png')},
         {
           name:'Bootstrap',
-          link:'/bootstrap',
+          link:'/home/bootstrap',
           imgsrc:''
         },
         {
           name:'test',
-          link:'/',
+          link:'/home',
           imgsrc:''
         },
         {
           name:'test',
-          link:'/',
+          link:'/home',
           imgsrc:''
         },
       ]
@@ -43,6 +44,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.home{
+  max-width: 900px;
+  position: absolute;
+  left:0px;
+  right: 0px;
+  margin: auto;
+  margin-top: 20px;
+}
+
 h1, h2 {
   font-weight: normal;
 }
@@ -52,16 +62,30 @@ ul {
   padding: 0;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
+a {
+  border-radius: 0px;
+  background-color: #FFF;
+  color: #000;
+
 }
 
-a {
-  color: #42b983;
+.router-link-exact-active{
+  background-color: #FFF;
+  color: #000;
+  border-radius: 0px;
 }
+
 
 .portfolio{
+  width: 200px;
+  height: 250px;
   display: inline-block;
+  background-color: #FFF;
+  margin: 0 10px 10px 10px;
+  box-shadow: #bbb 0px 0px 10px;
+}
+
+.portfolio>img{
+  border-bottom: 1px solid #eee; 
 }
 </style>
