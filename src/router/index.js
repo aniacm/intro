@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
+import Project from '@/components/Project'
 import About from '@/components/About'
+import Skill from '@/components/Skill'
+import Experience from '@/components/Experience'
 import Createjs from '@/components/Createjs'
 import Bootstrap from '@/components/Bootstrap'
 
@@ -11,26 +13,36 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: "/", redirect: "/home" },
-    {
-      path: '/home',
-      name: 'Home',
-      component: Home,
-      children: [
-      ]
-    },
+    { path: "/", redirect: "/about" },
     {
       path: '/about',
       name: 'About',
       component: About
     },
     {
-      path: '/home/createjs',
+      path: '/skill',
+      name: 'Skill',
+      component: Skill
+    },
+    {
+      path: '/experience',
+      name: 'Experience',
+      component: Experience
+    },
+    {
+      path: '/project',
+      name: 'Project',
+      component: Project,
+      children: [
+      ]
+    },
+    {
+      path: '/project/createjs',
       name: 'Createjs',
       component: Createjs
     },
     {
-      path: '/home/bootstrap',
+      path: '/project/bootstrap',
       name: 'Bootstrap',
       component: Bootstrap
     }

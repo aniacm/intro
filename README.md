@@ -1,4 +1,4 @@
-# my-portfolio-for-school
+# my-portfolio
 
 > portfolio in vue
 

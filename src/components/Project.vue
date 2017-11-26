@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="project">
     <div class="portfolio" v-for='list in linklist'>
       <img :src="list.imgsrc" height="200" width="200" alt="">
       <br> 
@@ -13,27 +13,27 @@
 
 <script>
 export default {
-  name: 'home',
+  name: 'project',
   data () {
     return {
       linklist: [
         {
           name:'Createjs小游戏',
-          link:'/home/createjs',
+          link:'/project/createjs',
           imgsrc:require('../assets/image/p1.png')},
         {
           name:'Bootstrap',
-          link:'/home/bootstrap',
+          link:'/project/bootstrap',
           imgsrc:''
         },
         {
           name:'test',
-          link:'/home',
+          link:'/project',
           imgsrc:''
         },
         {
           name:'test',
-          link:'/home',
+          link:'/project',
           imgsrc:''
         },
       ]
@@ -44,7 +44,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.home{
+.project{
   max-width: 900px;
   position: absolute;
   left:0px;
