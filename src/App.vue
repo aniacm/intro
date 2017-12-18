@@ -5,13 +5,14 @@
         <!-- <span>
           <img id="icon" src="./assets/image/icon.png" height="17" width="24" alt="">
         </span> -->
-        BLYTHE BAO
+        YETING BAO
       </div>
       <div class="right">
-        <router-link to="/about">个人简介</router-link>
-        <router-link to="/skill">专业技能</router-link>
-        <router-link to="/experience">工作经历</router-link>
-        <router-link to="/project">项目经验</router-link>
+        <router-link to="/about">{{ $t('message.ps') }}</router-link>
+        <router-link to="/skill">{{ $t('message.ski') }}</router-link>
+        <router-link to="/experience">{{ $t('message.exp') }}</router-link>
+        <router-link to="/project">{{ $t('message.pro') }}</router-link>
+        <span id="changeL" @click='changeLang()'>CN中 | EN英</span>
       </div>
     </div>
     <!-- <transition name='slide-fade' mode='out-in'> -->
@@ -22,7 +23,13 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  methods:{
+    changeLang(){
+      this.$i18n.locale= (this.$i18n.locale=='cn')?'en':'cn'
+      window.localStorage.setItem('language', this.$i18n.locale)
+    }
+  }
 }
 </script>
 
@@ -96,6 +103,11 @@ a{
 /* .slide-fade-leave-active for below version 2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;
+}
+
+#changeL{
+  padding: 0 20px;
+  cursor: pointer;
 }
 
 </style>

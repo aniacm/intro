@@ -4,10 +4,8 @@ import Project from '@/components/Project'
 import About from '@/components/About'
 import Skill from '@/components/Skill'
 import Experience from '@/components/Experience'
-import Createjs from '@/components/Createjs'
-import Bootstrap from '@/components/Bootstrap'
-
-
+// import Createjs from '@/components/Createjs'
+// import Bootstrap from '@/components/Bootstrap'
 
 Vue.use(Router)
 
@@ -35,16 +33,16 @@ export default new Router({
       component: Project,
       children: [
       ]
-    },
-    {
-      path: '/project/createjs',
-      name: 'Createjs',
-      component: Createjs
-    },
-    {
-      path: '/project/bootstrap',
-      name: 'Bootstrap',
-      component: Bootstrap
     }
+    // {
+    //   path: '/project/createjs',
+    //   name: 'Createjs',
+    //   component: Createjs
+    // },
+    // {
+    //   path: '/project/bootstrap',
+    //   name: 'Bootstrap',
+    //   component: Bootstrap
+    // }
   ]
 })
