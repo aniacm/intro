@@ -1,6 +1,13 @@
 <template>
 	<div class="skill">
-		
+		<div>
+      {{ $t('message.ski1') }}<br>
+      {{ $t('message.ski2') }}<br> 
+      {{ $t('message.ski3') }}<br> 
+      {{ $t('message.ski4') }}<br>
+      {{ $t('message.ski5') }}<br>
+      {{ $t('message.ski6') }}<br>
+    </div>
 	</div>
 </template>
 

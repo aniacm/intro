@@ -19,7 +19,7 @@ const messagesCn = {
   c_details: '具体工作: ',
 
   c1_name: 'DELL EMC',
-  c1_during: '06/2017-08/2017',
+  c1_during: '03/2016-10/2016',
   c1_position: '职位: Customer Service Engineer Assistant / Remote Proactive Service Team',
   c1_details_01: '-Working as an Intern to gain experience of working in the environment of Linux and Windows;',
   c1_details_02: '-Accomplishing the Code transfer part for different storage products;',
@@ -27,14 +27,16 @@ const messagesCn = {
   c1_details_04: '-Assisting the upgrade engineers to finish the first-phase preparations;',
 
   c2_name: '上海九爱软件科技公司',
-  c2_during: '03/2016-10/2016',
+  c2_during: '06/2017-08/2017',
   c2_position: '职位: Front-end Developer',
   c2_details_01: '-Building private npm sinopia repository under the environment of CentOS: in convenient to  manage the internal front-end resource;',
   c2_details_02: '-Formulating the relevant standard specification of json;',
   c2_details_03: '-Developing web pages by vue-cli and WeChat developer tools: including the function of searching, selecting, requesting and sorting data.',
 
   pai: '电脑绘图',
-  prog: '编程项目'
+  prog: '编程项目',
+
+  back: '返回'
 }
 
 export default messagesCn

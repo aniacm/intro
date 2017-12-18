@@ -32,14 +32,14 @@ export default {
       Painting_List:[
         {
           name:'虞姬',
-          link:'/project',
-          imgsrc: require('../assets/image/20160125.jpg')
+          link:'/project/painting/Yuji',
+          imgsrc: require('../assets/image/20160125_small.jpg')
           // imgsrc:require('../assets/image/p1.png')
         },
         {
           name:'Q版人物',
-          link:'/project',
-          imgsrc: require('../assets/image/20160128.jpg')
+          link:'/project/painting/choroq',
+          imgsrc: require('../assets/image/20160128_small.jpg')
         }
 
 
@@ -48,20 +48,16 @@ export default {
       Programming_List: [
         {
           name:'操作数组',
-          link:'/project'
+          link:'/project/programming/process_array'
         },
         {
           name:'css动画',
           link:'/project'
         },
         {
-          name:'test',
+          name:'none',
           link:'/project'
-        },
-        {
-          name:'test',
-          link:'/project'
-        },
+        }
       ]
     }
   }
@@ -123,7 +119,7 @@ a {
   height: 100px;
   box-shadow: #bbb 0px 0px 10px;
   line-height: 100px;
-  background-color: #3A8AFF;
+  background-color: #8BC1FF;
 }
 
 .portfolio>img{

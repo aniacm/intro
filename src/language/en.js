@@ -19,7 +19,7 @@ const messagesEn = {
   c_details: 'Details: ',
 
   c1_name: 'DELL EMC',
-  c1_during: '06/2017-08/2017',
+  c1_during: '03/2016-10/2016',
   c1_position: 'Position: Customer Service Engineer Assistant / Remote Proactive Service Team',
   c1_details_01: '-Working as an Intern to gain experience of working in the environment of Linux and Windows;',
   c1_details_02: '-Accomplishing the Code transfer part for different storage products;',
@@ -27,7 +27,7 @@ const messagesEn = {
   c1_details_04: '-Assisting the upgrade engineers to finish the first-phase preparations;',
 
   c2_name: 'Shanghai Jiuai Software Technology Co.Ltd',
-  c2_during: '03/2016-10/2016',
+  c2_during: '06/2017-08/2017',
   c2_position: 'Position: Front-end Developer',
   c2_details_01: '-Building private npm sinopia repository under the environment of CentOS: in convenient to  manage the internal front-end resource;',
   c2_details_02: '-Formulating the relevant standard specification of json;',
@@ -35,7 +35,9 @@ const messagesEn = {
 
 
   pai: 'Painting',
-  prog: 'Programming'
+  prog: 'Programming',
+
+  back: 'Back'
 }
 
 export default messagesEn

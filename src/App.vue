@@ -63,6 +63,8 @@ a{
   line-height: 60px;
   background-color: #FFF;
   display: flex;
+  border-bottom: 1px solid #eee;
+
 }
 
 #title>.left{
@@ -108,6 +110,7 @@ a{
 #changeL{
   padding: 0 20px;
   cursor: pointer;
+  background-color: #FED1BB;
 }
 
 </style>

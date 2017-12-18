@@ -1,7 +1,7 @@
 <template>
 	<div id='about'>
 		<div id='headimg'>
-
+			<img src="../assets/image/photo.jpg" height="300" width="300" alt="">
 		</div>
 
 		<div id="introduce">
@@ -44,8 +44,8 @@ export default{
 #about{
 }
 	
-#headimg{
-	background-color: #000;
+#headimg>img{
+	/*background-color: #000;*/
 	width: 300px;
 	height: 300px;
 	border-radius: 150px;
