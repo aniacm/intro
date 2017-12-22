@@ -16,7 +16,10 @@
       </div>
     </div>
     <!-- <transition name='slide-fade' mode='out-in'> -->
+      
+    <div class="view">
       <router-view></router-view>
+    </div>
     <!-- </transition> -->
   </div>
 </template>
@@ -45,7 +48,7 @@ body{
 
 a{
   text-decoration: none;
-  color: #000;
+  color: #074080;
   cursor: pointer;
 }
 
@@ -59,12 +62,13 @@ a{
 
 #title{
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
   line-height: 60px;
   background-color: #FFF;
   display: flex;
   border-bottom: 1px solid #eee;
-
+  position: fixed;
+  z-index: 999;
 }
 
 #title>.left{
@@ -110,7 +114,12 @@ a{
 #changeL{
   padding: 0 20px;
   cursor: pointer;
-  background-color: #FED1BB;
+  background-color: #074080;
+  color: #fff;
+}
+
+.view{
+  padding-top: 60px;
 }
 
 </style>

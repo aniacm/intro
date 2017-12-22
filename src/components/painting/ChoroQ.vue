@@ -1,10 +1,10 @@
 <template>
-	<div class="choroq">
+	<div id="choroq">
     &lt;&lt;
     <router-link to='/project'>
-        Projects
+        {{ $t('message.pro') }}
     </router-link>
-    - Painting - Choro-q
+    - {{ $t('message.pai') }} - Choro-q
     <br>
 		<img src="../../assets/image/20160128.jpg" alt="">
 	</div>

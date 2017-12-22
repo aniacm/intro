@@ -1,7 +1,7 @@
 <template>
-  <div class="project">
+  <div id="project">
     <div class="painting">
-      <p>{{ $t('message.pai') }}</p>
+      <h3>{{ $t('message.pai') }}</h3>
       <div class="portfolio" v-for='list in Painting_List'> 
         <router-link :to='list.link'>
           <!-- {{list.name}} -->
@@ -10,12 +10,12 @@
       </div>
     </div>
     <div class="programming">
-      <p>{{ $t('message.prog') }}</p>
+      <h3>{{ $t('message.prog') }}</h3>
       <div class="portfolio" v-for='list in Programming_List'>
         <br> 
         <router-link :to='list.link'>
           <div class="linkdiv">
-            {{list.name}}
+            {{ $t(list.name) }}
           </div>
         </router-link>
       </div>
@@ -47,15 +47,15 @@ export default {
       ],
       Programming_List: [
         {
-          name:'操作数组',
+          name: 'message.ProcessData',
           link:'/project/programming/process_array'
         },
         {
-          name:'css动画',
+          name:'',
           link:'/project'
         },
         {
-          name:'none',
+          name:'',
           link:'/project'
         }
       ]
@@ -66,7 +66,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.project{
+#project{
   width: 70%;
   /*max-width: 900px;*/
   /*height: 90%;*/

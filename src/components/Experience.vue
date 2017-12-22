@@ -1,5 +1,7 @@
 <template>
-	<div class="experience">
+	<div id="experience">
+
+    <h3>{{ $t('message.work') }}</h3>
 
     <div id="c2">
 
@@ -49,13 +51,26 @@
 
     </div>
 
+    <h3>{{ $t('message.education') }}</h3>
+
+    <div id="edu">
+      
+      <div class="left">
+        {{ $t('message.e_during') }}
+      </div>
+
+      <div class="right">
+        {{ $t('message.e_name') }}
+      </div>
+
+    </div>
 
 
 	</div>
 </template>
 
 <style scoped>
-.experience{
+#experience{
   width: 70%;
   /*height: 90%;*/
   position: absolute;
@@ -65,7 +80,7 @@
   background-color: #fff;
 }
 
-#c1,#c2{
+#c1,#c2,#edu{
   display: flex;
   margin-bottom: 5%;
 }

@@ -1,10 +1,10 @@
 <template>
-	<div class="yuji">
+	<div id="yuji">
     &lt;&lt;
     <router-link to='/project'>
-        Projects
+        {{ $t('message.pro') }}
     </router-link>
-    - Painting - Yuji
+    - {{ $t('message.pai') }} - Yuji
 		<img src="../../assets/image/20160125.jpg" alt="">
 	</div>
 </template>

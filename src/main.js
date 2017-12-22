@@ -13,8 +13,8 @@ function lang () {
 // 将选择的语言存在localStorage中
   let t = window.localStorage.getItem('language')
   if (t) return t
-  // 默认中文
-  else return 'cn'
+  // 默认英文
+  else return 'en'
 }
  
 const language = lang()

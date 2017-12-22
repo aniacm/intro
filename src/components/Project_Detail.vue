@@ -1,5 +1,5 @@
 <template>
-	<div class="project_detail">
+	<div id="project_detail">
 
 
     <router-view></router-view>
@@ -13,11 +13,11 @@
 	</div>
 </template>
 
-<style scoped>
-.project_detail{
+<style>
+#project_detail{
   width: 70%;
   /*max-width: 900px;*/
-  /*height: 90%;*/
+  /*height: 100%;*/
   position: absolute;
   margin: 0% 10%;
   padding: 5%;
@@ -34,5 +34,11 @@
   background-color: #FC3941;
   color: #fff;
   margin: auto;
+}
+
+img {
+  display: inline-block;
+  height: auto;
+  max-width:100%; 
 }
 </style>

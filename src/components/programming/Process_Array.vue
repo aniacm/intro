@@ -1,19 +1,19 @@
 <template>
-	<div class="process_array">
+	<div id="process_array">
 		&lt;&lt;
 		<router-link to='/project'>
-		    Projects
+		    {{ $t('message.pro') }}
 		</router-link>
-		- Programming - Process the array
+		- {{ $t('message.prog')}} - {{ $t('message.ProcessData') }}
 
 		<div class="process">
 			<input id="arrayinput" v-model="Array_num" placeholder="edit me">
-			<button @click='Sort(Array_num)'>Sort</button>
-			<button @click='Distinct(Array_num)'>Distinct</button>
+			<button @click='Sort(Array_num)'>{{ $t('message.sort') }}</button>
+			<button @click='Distinct(Array_num)'>{{ $t('message.distinct') }}</button>
 		</div>
 		
 		<div class="result">
-			Results: {{Results}}
+			{{ $t('message.result') }}: {{Results}}
 		</div>
 
 	</div>

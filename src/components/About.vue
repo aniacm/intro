@@ -8,21 +8,25 @@
 
 			<div class="left">
 			<!-- {{ $t('message.') }} -->
-				<b>
-					{{ $t('message.nam') }}
-					<br>
-					{{ $t('message.loc') }}
-					<br>
-					<a href="https://github.com/aniacm"><img src="../assets/image/GitHub-Mark-32px.png" height="32" width="32" alt=""></a>
-				</b>
+				{{ $t('message.nam') }}
+				<br>
+				{{ $t('message.loc') }}
+				<br>
+				<a class="icon" href="https://github.com/aniacm">
+					<img src="../assets/image/GitHub-Mark-32px.png" height="32" width="32" alt="">
+				</a>
+
+				<a class="icon" href="mailto:blythebao@foxmail.com">
+					<img src="../assets/image/email_32px.png" height="32" width="32" alt="">
+				</a>
+				
 			</div>
 			<div class="right">
-				<b>
-					{{ $t('message.int') }}
-					<br>
-					{{ $t('message.web') }}:
-					<a href="http://www.blythebao.xyz">http://www.blythebao.xyz</a>
-				</b>
+				{{ $t('message.int') }}
+				<br>
+				{{ $t('message.web') }}:
+				<a href="http://www.blythebao.xyz">http://www.blythebao.xyz</a>
+
 			</div>
 
 			
@@ -60,7 +64,7 @@ export default{
 	background-color: #fff;
 	margin: auto;
 	margin-top: 50px;
-	padding: 5% 0%;
+	padding: 4% 0%;
 	left:0;
 	text-align: left;
 	display: flex;
@@ -76,6 +80,10 @@ export default{
 /*	position: absolute;
 	width: 50%;
 	left: 40%;*/
+}
+
+.icon{
+	margin-right: 10px;
 }
 
 </style>
