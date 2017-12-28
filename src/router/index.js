@@ -4,8 +4,12 @@ import Project from '@/components/Project'
 import About from '@/components/About'
 import Skill from '@/components/Skill'
 import Experience from '@/components/Experience'
-import Process_Array from '@/components/programming/Process_Array'
+
 import Project_Detail from '@/components/Project_Detail'
+
+import Process_Data from '@/components/programming/Process_Data'
+import Carousel from '@/components/programming/Carousel'
+
 import Yuji from '@/components/painting/Yuji'
 import ChoroQ from '@/components/painting/ChoroQ'
 
@@ -41,17 +45,17 @@ export default new Router({
 
     {
       path: '/project/painting',
-      name: 'Painting',
+      name: 'message.pai',
       component: Project_Detail,
       children: [
         {
           path: 'yuji',
-          name: 'Yuji',
+          name: 'message.yuji',
           component: Yuji
         },
         {
           path: 'choroq',
-          name: 'ChoroQ',
+          name: 'message.choroq',
           component: ChoroQ
         },
 
@@ -60,13 +64,18 @@ export default new Router({
 
     {
       path: '/project/programming',
-      name: 'Programming',
+      name: 'message.prog',
       component: Project_Detail,
       children: [
         {
-          path: 'process_array',
-          name: 'Process_Array',
-          component: Process_Array
+          path: 'process_data',
+          name: 'message.ProcessData',
+          component: Process_Data
+        },
+        {
+          path: 'carousel',
+          name: 'message.carousel',
+          component: Carousel
         }
 
       ]

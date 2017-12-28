@@ -8,8 +8,8 @@ const messagesEn = {
 
   nam: 'Name: YeTing Bao',
   loc: 'Location: ShangHai',
-  int:'',
-  web:'website',
+  int: 'Future career goal is to be a web developer or UX designer. The books I am reading: 1. The Design of Everyday Things--Don Norman; 2.Don’t Make Me Think--Steve Krug',
+  web: 'website',
 
   ski1:'1. HTML, CSS, Javascript, C and JAVA programming skills.',
   ski2:'2. Fundamental knowledge of MySQL, MongoDB.',
@@ -46,10 +46,15 @@ const messagesEn = {
 
   back: 'Back',
 
+  yuji: 'Yuji',
+  choroq: 'Choro-Q',
+
   ProcessData: 'ProcessData',
   sort: 'Sort',
   distinct: 'Distinct',
-  result: 'Result'
+  result: 'Result',
+
+  carousel: 'Carousel'
 
 }
 

@@ -7,8 +7,6 @@
       {{ $t('message.ski1') }}<br>
       {{ $t('message.ski2') }}<br> 
       {{ $t('message.ski3') }}<br> 
-    </div>
-    <div class="right">
       {{ $t('message.ski4') }}<br>
       {{ $t('message.ski5') }}<br>
       {{ $t('message.ski6') }}<br>
@@ -87,16 +85,20 @@ export default {
   padding: 5%;
   text-align: left;
   background-color: #fff;
+  display: flex;
 }
 
 #radarchart{
   width: 500px;
   height: 500px;
-  margin: auto;
+  /*margin: auto;*/
+  display: inline-block;
+  /*float: left;*/
 }
 
 .left{
-  float: left;
+  padding-top: 18%;
+  /*float: left;*/
   width: 50%;
 }
 

@@ -76,7 +76,7 @@ export default{
 }
 
 #introduce>.right{
-	/*margin-left: 10%;*/
+	margin-right: 10%;
 /*	position: absolute;
 	width: 50%;
 	left: 40%;*/

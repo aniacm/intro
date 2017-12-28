@@ -8,7 +8,7 @@ const messagesCn = {
 
   nam: '姓名: 包烨婷',
   loc: '所在地: 上海',
-  int: '前端开发者, 致力于学习不同文化与技能。',
+  int: '前端开发者, 致力于学习不同文化与技能, 未来职业或成为UX Designer/软件开发者。推荐几本UX基础读物, 唐纳德·A·诺曼的《设计心理学》, Steve Krug的《Don’t Make Me Think》',
   web: '个人学习博客',
 
   ski1:'1. 掌握 HTML, CSS, Javascript, C 和 JAVA 编程技能。',
@@ -46,10 +46,16 @@ const messagesCn = {
 
   back: '返回',
 
+  yuji: '虞姬',
+  choroq: 'Q版人物',
+
+
   ProcessData: '处理数组',
   sort: '排序',
   distinct: '去重',
-  result: '处理结果'
+  result: '处理结果',
+
+  carousel: '轮播图'
 }
 
 export default messagesCn

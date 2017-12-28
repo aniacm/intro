@@ -2,19 +2,19 @@
   <div id="project">
     <div class="painting">
       <h3>{{ $t('message.pai') }}</h3>
-      <div class="portfolio" v-for='list in Painting_List'> 
+      <div class="portfolio pai" v-for='list in Painting_List'> 
         <router-link :to='list.link'>
           <!-- {{list.name}} -->
-          <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="100" width="100" alt="">
+          <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="">
         </router-link>
       </div>
     </div>
     <div class="programming">
       <h3>{{ $t('message.prog') }}</h3>
-      <div class="portfolio" v-for='list in Programming_List'>
+      <div class="portfolio pro" v-for='list in Programming_List'>
         <br> 
         <router-link :to='list.link'>
-          <div class="linkdiv">
+          <div class="linkdiv" :style="list.bgcolor">
             {{ $t(list.name) }}
           </div>
         </router-link>
@@ -41,22 +41,22 @@ export default {
           link:'/project/painting/choroq',
           imgsrc: require('../assets/image/20160128_small.jpg')
         }
-
-
-
       ],
       Programming_List: [
         {
           name: 'message.ProcessData',
-          link:'/project/programming/process_array'
+          link:'/project/programming/process_data',
+          bgcolor: 'background-color:#074080'
+        },
+        {
+          name:'message.carousel',
+          link:'/project/programming/carousel',
+          bgcolor: 'background-color:#108080'
         },
         {
           name:'',
-          link:'/project'
-        },
-        {
-          name:'',
-          link:'/project'
+          link:'/project',
+          bgcolor: 'background-color:#108040'
         }
       ]
     }
@@ -88,12 +88,12 @@ ul {
 
 a {
   border-radius: 0px;
-  background-color: #FFF;
+  /*background-color: #FFF;*/
   color: #000;
 }
 
 .router-link-exact-active{
-  background-color: #FFF;
+  /*background-color: #FFF;*/
   color: #000;
   border-radius: 0px;
 }
@@ -102,25 +102,54 @@ a {
 .portfolio{
   /*width: 100px;*/
   /*height: 100px;*/
+  /*overflow: hidden;*/
   display: inline-block;
   /*background-color: #FFF;*/
-  margin: 5%;
   vertical-align: top;
   text-align: center;
   /*line-height: 100px;*/
+  transition: 0.3s;
+  /*background-color: #000;*/
 }
+
+.pai{
+  margin: 5% 0;
+  background-color: #000;
+  height: 200px;
+}
+
+.pro{
+  margin: 3% 0;
+}
+
+
 
 .linkimg{
   box-shadow: #bbb 0px 0px 10px;
+  z-index: 999;
 }
 
-.linkdiv{
-  width: 100px;
-  height: 100px;
-  box-shadow: #bbb 0px 0px 10px;
-  line-height: 100px;
-  background-color: #8BC1FF;
+.linkimg:hover{
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
+
+
+.linkdiv{
+  width: 200px;
+  height: 100px;
+  /*box-shadow: #bbb 0px 0px 10px;*/
+  line-height: 100px;
+  /*background-color: #FFFF0A;*/
+  z-index: 999;
+  color: #fff;
+}
+
+.linkdiv:hover{
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
 
 .portfolio>img{
   border-bottom: 1px solid #eee; 
