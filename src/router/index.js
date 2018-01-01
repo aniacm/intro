@@ -9,6 +9,8 @@ import Project_Detail from '@/components/Project_Detail'
 
 import Process_Data from '@/components/programming/Process_Data'
 import Carousel from '@/components/programming/Carousel'
+import WebGL from '@/components/programming/Threejs_Demo'
+
 
 import Yuji from '@/components/painting/Yuji'
 import ChoroQ from '@/components/painting/ChoroQ'
@@ -76,6 +78,11 @@ export default new Router({
           path: 'carousel',
           name: 'message.carousel',
           component: Carousel
+        },
+        {
+          path: 'webgl',
+          name: 'message.ThreejsDemo',
+          component: WebGL
         }
 
       ]

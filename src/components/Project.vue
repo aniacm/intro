@@ -54,8 +54,8 @@ export default {
           bgcolor: 'background-color:#108080'
         },
         {
-          name:'',
-          link:'/project',
+          name:'message.ThreejsDemo',
+          link:'/project/programming/webgl',
           bgcolor: 'background-color:#108040'
         }
       ]

@@ -55,7 +55,9 @@ const messagesCn = {
   distinct: '去重',
   result: '处理结果',
 
-  carousel: '轮播图'
+  carousel: '轮播图',
+
+  ThreejsDemo: 'WebGL'
 }
 
 export default messagesCn

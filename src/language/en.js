@@ -54,7 +54,9 @@ const messagesEn = {
   distinct: 'Distinct',
   result: 'Result',
 
-  carousel: 'Carousel'
+  carousel: 'Carousel',
+
+  ThreejsDemo: 'WebGL'
 
 }
 
