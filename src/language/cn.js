@@ -30,12 +30,12 @@ const messagesCn = {
   c1_details_03: '- 通过电话和邮件与来自欧洲、美洲和亚洲的客户进行沟通;',
   c1_details_04: '- 协助升级工程师完成第一阶段准备工作。',
 
-  c2_name: '上海九爱软件科技公司',
+  c2_name: '上海九爱软件科技公司(上圆)',
   c2_during: '06/2017-08/2017',
   c2_position: '职位: 前端开发员',
   c2_details_01: '- 在Centos的环境下搭建npm私有资源库sinopia, 以便于管理前端内部资源;',
   c2_details_02: '- 制定相关json文件的命名规范;',
-  c2_details_03: '- 通过原声js、vue-cli或微信开发者工具来开发网页, 包括了搜索、筛选、请求和排序数据的功能。',
+  c2_details_03: '- 通过原生js、vue-cli或微信开发者工具来开发网页, 包括了搜索、筛选、请求和排序数据的功能。',
 
   education: '教育经历',
   e_name: '上海海洋大学 - 本科 - 计算机科学与技术',
@@ -57,7 +57,7 @@ const messagesCn = {
 
   carousel: '轮播图',
 
-  ThreejsDemo: 'WebGL'
+  webgl: 'WebGL'
 }
 
 export default messagesCn

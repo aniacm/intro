@@ -30,7 +30,7 @@ const messagesEn = {
   c1_details_03: '-Communicating with customers of Europe, America and Asia via E-mail and phone;',
   c1_details_04: '-Assisting the upgrade engineers to finish the first-phase preparations;',
 
-  c2_name: 'Shanghai Jiuai Software Technology Co.Ltd',
+  c2_name: 'Shanghai Jiuai Software Technology Co.Ltd (ShangYuan)',
   c2_during: '06/2017-08/2017',
   c2_position: 'Position: Front-end Developer',
   c2_details_01: '-Building private npm sinopia repository under the environment of CentOS: in convenient to  manage the internal front-end resource;',
@@ -56,7 +56,7 @@ const messagesEn = {
 
   carousel: 'Carousel',
 
-  ThreejsDemo: 'WebGL'
+  webgl: 'WebGL'
 
 }
 

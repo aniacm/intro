@@ -9,7 +9,7 @@ import Project_Detail from '@/components/Project_Detail'
 
 import Process_Data from '@/components/programming/Process_Data'
 import Carousel from '@/components/programming/Carousel'
-import WebGL from '@/components/programming/Threejs_Demo'
+import WebGL from '@/components/programming/Webgl_threejs'
 
 
 import Yuji from '@/components/painting/Yuji'
@@ -81,7 +81,7 @@ export default new Router({
         },
         {
           path: 'webgl',
-          name: 'message.ThreejsDemo',
+          name: 'message.webgl',
           component: WebGL
         }
 

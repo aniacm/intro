@@ -71,8 +71,8 @@ export default{
 }
 
 #introduce>.left{
-	width: 30%;
-	margin-left: 10%; 
+	width: 300px;
+	margin: 0 10%; 
 }
 
 #introduce>.right{

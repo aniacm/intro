@@ -1,12 +1,12 @@
 <template>
-    <div id="threejs_demo">
+    <div id="webgl">
 
     </div>
 </template>
 <script>
 import * as THREE from 'three'
 export default {
-    name: 'threejs_demo',
+    name: 'webgl',
     data() {
         return {
         	width : '',
@@ -23,7 +23,7 @@ export default {
 
     	var that=this;
 
-    	that.width=document.getElementById('threejs_demo').clientWidth;
+    	that.width=document.getElementById('webgl').clientWidth;
 
     	that.height=that.width/2;
 
@@ -39,7 +39,7 @@ export default {
     	        antialias : true
     	    });
     	    renderer.setSize(that.width, that.height);
-    	    document.getElementById('threejs_demo').appendChild(renderer.domElement);
+    	    document.getElementById('webgl').appendChild(renderer.domElement);
     	    renderer.setClearColor(0xeeeeee, 1.0);
     	}
 
@@ -77,6 +77,11 @@ export default {
     		geometry.vertices.push(new THREE.Vector3(10,0,0));
     		geometry.vertices.push(new THREE.Vector3(0,-10,0));
     		geometry.vertices.push(new THREE.Vector3(-10,0,0));
+    		geometry.vertices.push(new THREE.Vector3(1,9,0));
+    		geometry.vertices.push(new THREE.Vector3(9,-1,0));
+    		geometry.vertices.push(new THREE.Vector3(-1,-9,0));
+    		geometry.vertices.push(new THREE.Vector3(-8.9,0.9,0));
+
     		line = new THREE.Line(geometry,material);
     		scene.add(line);
     	}
@@ -108,7 +113,7 @@ export default {
 }
 </script>
 <style scoped>
-#threejs_demo{
+#webgl{
 	margin: 5% 0%;
 }
 canvas{
