@@ -50,11 +50,12 @@ export default{
 	
 #headimg>img{
 	/*background-color: #000;*/
+	/*position: absolute;*/
 	width: 300px;
 	height: 300px;
-	border-radius: 150px;
+	border-radius: 50%;
 	margin: auto;
-	margin-top: 80px; 
+	margin-top: 10%; 
 }
 
 #introduce{
@@ -84,6 +85,12 @@ export default{
 
 .icon{
 	margin-right: 10px;
+}
+
+@media screen and (max-width: 800px) {  
+#headimg>img{
+	margin-top:5%;
+}
 }
 
 </style>

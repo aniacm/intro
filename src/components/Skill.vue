@@ -105,18 +105,19 @@ export default {
 @media screen and (max-width: 600px) {  
 #skill{
   display: block;
+  width: 90%;
+  margin: 0;
 }
 
 #radarchart{
   /*margin-top:10%;*/
-  width: 300px;
-  height: 240px;
+  width: 320px;
+  height: 250px;
 }
 
 .left{
   width: 100%;
 }
-
 
 }
 </style>

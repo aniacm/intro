@@ -59,4 +59,12 @@ img {
     height: auto;
     max-width: 100%;
 }
+
+@media screen and (max-width: 800px) {  
+#project_detail {
+    width: 90%;
+    margin: 0;
+}
+}
+
 </style>

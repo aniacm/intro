@@ -64,4 +64,13 @@
 .right {
     width: 90%;
 }
+
+@media screen and (max-width: 800px) {  
+#experience {
+    width: 90%;
+    margin: 0;
+    /*padding: 0;*/
+}
+}
+
 </style>

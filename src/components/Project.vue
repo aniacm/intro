@@ -1,14 +1,6 @@
 <template>
   <div id="project">
-    <div class="painting">
-      <h3>{{ $t('message.pai') }}</h3>
-      <div class="portfolio pai" v-for='list in Painting_List'> 
-        <router-link :to='list.link'>
-          <!-- {{list.name}} -->
-          <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="">
-        </router-link>
-      </div>
-    </div>
+
     <div class="programming">
       <h3>{{ $t('message.prog') }}</h3>
       <div class="portfolio pro" v-for='list in Programming_List'>
@@ -20,7 +12,19 @@
         </router-link>
       </div>
     </div>
+
+    <div class="painting">
+      <h3>{{ $t('message.pai') }}</h3>
+      <div class="portfolio pai" v-for='list in Painting_List'> 
+        <router-link :to='list.link'>
+          <!-- {{list.name}} -->
+          <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="">
+        </router-link>
+      </div>
+    </div>
+
     <router-view></router-view> 
+
   </div>
 </template>
 
@@ -154,4 +158,13 @@ a {
 .portfolio>img{
   border-bottom: 1px solid #eee; 
 }
+
+@media screen and (max-width: 800px) {  
+#project {
+    width: 90%;
+    margin: 0;
+    /*padding: 0;*/
+}
+}
+
 </style>
