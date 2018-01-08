@@ -39,13 +39,23 @@
 
 
 export default{
-	name: 'About'
+	name: 'About',
+	mounted(){
+		this.$nextTick(function(){
+        //对DOM的操作放在这
+        	// console.log(window.innerHeight,document.body.clientHeight,document.getElementById('introduce').clientHeight);
+        	let mt=(window.innerHeight-document.body.clientHeight-document.getElementById('introduce').clientHeight)/2;
+        	// console.log(mt);
+        	document.getElementById('headimg').style.marginTop=mt+'px';
+    	})
+	}
 }
 </script>
 
 <style>
 
 #about{
+	/*background-image: url(../assets/image/bg_01.png);*/
 }
 	
 #headimg>img{
@@ -55,7 +65,7 @@ export default{
 	max-height: 18em;
 	border-radius: 50%;
 	margin: auto;
-	margin-top: 8%; 
+	/*margin-top: 8%; */
 }
 
 #introduce{
@@ -64,7 +74,6 @@ export default{
 	bottom: 0px;
 	background-color: #fff;
 	margin: auto;
-	margin-top: 50px;
 	padding: 4% 0%;
 	left:0;
 	text-align: left;
@@ -91,7 +100,7 @@ export default{
 #headimg>img{
 	max-width: 15em;
 	max-height: 15em;
-	margin-top:5%;
+	/*margin-top:5%;*/
 }
 }
 

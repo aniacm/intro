@@ -40,8 +40,11 @@ export default {
   padding: 0px;
 }
 body{
-  /*background-color: #EEEEEE;*/
-  background-image: url(./assets/image/stone.jpg);
+  background-color: #282A2A;
+  background-image: url(./assets/image/bg_01.png);
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
 }
 
 a{
@@ -64,7 +67,7 @@ a{
   line-height: 60px;
   background-color: #FFF;
   display: flex;
-  border-bottom: 1px solid #eee;
+  border-bottom: 5px solid #074080;
   position: fixed;
   z-index: 999;
 }
@@ -134,6 +137,8 @@ a{
   background-color: #074080;
   color: #fff;
   padding: 0px;
+  opacity:0.9;
+
 }
 
 #title>.right>img{
