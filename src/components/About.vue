@@ -43,8 +43,8 @@ export default{
 	mounted(){
 		this.$nextTick(function(){
         //对DOM的操作放在这
-        	// console.log(window.innerHeight,document.body.clientHeight,document.getElementById('introduce').clientHeight);
-        	let mt=(window.innerHeight-document.body.clientHeight-document.getElementById('introduce').clientHeight)/2;
+        	console.log(window.innerHeight,document.body.clientHeight,document.getElementById('introduce').clientHeight);
+        	let mt=(window.innerHeight-document.body.clientHeight-280)/2;
         	console.log(mt);
         	document.getElementById('headimg').style.marginTop=mt+'px';
     	})
