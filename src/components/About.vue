@@ -1,7 +1,7 @@
 <template>
 	<div id='about'>
 		<div id='headimg'>
-			<img src="../assets/image/photo.jpg" height="300" width="300" alt="">
+			<img src="../assets/image/photo.jpg" height="300" width="300">
 		</div>
 
 		<div id="introduce">
@@ -45,7 +45,7 @@ export default{
         //对DOM的操作放在这
         	// console.log(window.innerHeight,document.body.clientHeight,document.getElementById('introduce').clientHeight);
         	let mt=(window.innerHeight-document.body.clientHeight-document.getElementById('introduce').clientHeight)/2;
-        	// console.log(mt);
+        	console.log(mt);
         	document.getElementById('headimg').style.marginTop=mt+'px';
     	})
 	}

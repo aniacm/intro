@@ -129,6 +129,11 @@ a{
 }
 
 @media screen and (max-width: 800px) {  
+
+body{
+  background-image: url(./assets/image/bg_01_small.png);
+}
+
 #title>.right{
   right: 0px;
 }
