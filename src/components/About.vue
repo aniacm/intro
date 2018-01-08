@@ -41,13 +41,13 @@
 export default{
 	name: 'About',
 	mounted(){
-		this.$nextTick(function(){
+		// this.$nextTick(function(){
         //对DOM的操作放在这
         	console.log(window.innerHeight,document.body.clientHeight,document.getElementById('introduce').clientHeight);
-        	let mt=(window.innerHeight-document.body.clientHeight-280)/2;
+        	let mt=(window.innerHeight-310-document.getElementById('introduce').clientHeight)/2;
         	console.log(mt);
         	document.getElementById('headimg').style.marginTop=mt+'px';
-    	})
+    	// })
 	}
 }
 </script>
