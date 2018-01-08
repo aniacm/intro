@@ -41,14 +41,14 @@ const messagesCn = {
   e_name: '上海海洋大学 - 本科 - 计算机科学与技术',
   e_during: '09/2013-07/2017',
 
-  pai: '电脑绘图',
+  pai: '手绘项目',
   prog: '编程项目',
 
   back: '返回',
 
   yuji: '虞姬',
   choroq: 'Q版人物',
-
+  oilpainting: '首次油画临摹',
 
   ProcessData: '处理数组',
   sort: '排序',

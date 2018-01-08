@@ -36,7 +36,7 @@ export default {
       Painting_List:[
         {
           name:'虞姬',
-          link:'/project/painting/Yuji',
+          link:'/project/painting/yuji',
           imgsrc: require('../assets/image/20160125_small.jpg')
           // imgsrc:require('../assets/image/p1.png')
         },
@@ -44,7 +44,13 @@ export default {
           name:'Q版人物',
           link:'/project/painting/choroq',
           imgsrc: require('../assets/image/20160128_small.jpg')
+        },
+        {
+          name:'油画',
+          link:'/project/painting/oilpainting',
+          imgsrc: require('../assets/image/oilpainting_small.jpg')
         }
+
       ],
       Programming_List: [
         {
@@ -106,7 +112,7 @@ a {
 .portfolio{
   /*width: 100px;*/
   /*height: 100px;*/
-  /*overflow: hidden;*/
+  overflow: hidden;
   display: inline-block;
   /*background-color: #FFF;*/
   vertical-align: top;

@@ -51,11 +51,11 @@ export default{
 #headimg>img{
 	/*background-color: #000;*/
 	/*position: absolute;*/
-	width: 300px;
-	height: 300px;
+	max-width: 18em;
+	max-height: 18em;
 	border-radius: 50%;
 	margin: auto;
-	margin-top: 10%; 
+	margin-top: 8%; 
 }
 
 #introduce{
@@ -89,6 +89,8 @@ export default{
 
 @media screen and (max-width: 800px) {  
 #headimg>img{
+	max-width: 15em;
+	max-height: 15em;
 	margin-top:5%;
 }
 }

@@ -14,6 +14,7 @@ import WebGL from '@/components/programming/Webgl_threejs'
 
 import Yuji from '@/components/painting/Yuji'
 import ChoroQ from '@/components/painting/ChoroQ'
+import OilPainting from '@/components/painting/OilPainting'
 
 
 Vue.use(Router)
@@ -60,6 +61,12 @@ export default new Router({
           name: 'message.choroq',
           component: ChoroQ
         },
+        {
+          path: 'oilpainting',
+          name: 'message.oilpainting',
+          component: OilPainting
+        },
+
 
       ]
     },

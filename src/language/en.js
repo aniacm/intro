@@ -48,6 +48,7 @@ const messagesEn = {
 
   yuji: 'Yuji',
   choroq: 'Choro-Q',
+  oilpainting: 'First copy of OilPainting!',
 
   ProcessData: 'ProcessData',
   sort: 'Sort',
