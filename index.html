@@ -10,3 +10,15 @@
     <!-- built files will be auto injected -->
   </body>
 </html>
+
+<script>
+	var newImg = new Image();
+	newImg.src = './static/bg_01.png';
+	newImg.onload = () => { // 图片加载成功后更换背景地址
+	  console.log("加载成功");
+	  // setTimeout("",5000)
+	  this.document.body.style.backgroundImage = "url("+newImg.src+")";
+	  // console.log(this.document.body.style)
+	}
+
+</script>

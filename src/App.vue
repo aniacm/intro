@@ -25,11 +25,30 @@
 <script>
 export default {
   name: 'app',
+  data(){
+    return{
+      msg:''
+    }
+  },
   methods:{
     changeLang(){
       this.$i18n.locale= (this.$i18n.locale=='cn')?'en':'cn'
       window.localStorage.setItem('language', this.$i18n.locale)
     }
+  },
+  mounted(){
+    // this.$nextTick(function(){
+    //   document.body.style.backgroundImage = require('./assets/image/bg_01.png');
+    // })
+    // this.bgimg=require('./assets/image/bg_01.png')
+    
+    // var newImg = new Image()
+    // newImg.src = require('./assets/image/bg_01.png')
+    // newImg.onload = () => { // 图片加载成功后把地址给原来的img
+    //   console.log("加载成功")
+    //   document.body.style.backgroundImage = newImg.src;
+    //   // console.log(document.body.backgroundImage)
+    // }
   }
 }
 </script>
@@ -41,7 +60,7 @@ export default {
 }
 body{
   background-color: #282A2A;
-  background-image: url(./assets/image/bg_01.png);
+  background-image: url(./assets/image/bg_01_small.png);
   background-repeat: no-repeat;
   background-attachment:fixed;
   background-size: cover;
@@ -59,6 +78,7 @@ a{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
 }
 
 #title{
