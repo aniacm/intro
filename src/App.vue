@@ -59,8 +59,8 @@ export default {
   padding: 0px;
 }
 body{
-  background-color: #282A2A;
-  background-image: url(./assets/image/bg_01_small.png);
+  background-color: #0C1624;
+  /*background-image: url(./assets/image/bg_01_small.png);*/
   background-repeat: no-repeat;
   background-attachment:fixed;
   background-size: cover;
@@ -151,7 +151,7 @@ a{
 @media screen and (max-width: 800px) {  
 
 body{
-  background-image: url(./assets/image/bg_01_small.png);
+  /*background-image: url(./assets/image/bg_01_small.png);*/
 }
 
 #title>.right{
