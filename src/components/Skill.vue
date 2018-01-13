@@ -102,7 +102,7 @@ export default {
   width: 50%;
 }
 
-@media screen and (max-width: 600px) {  
+@media screen and (max-width: 800px) {  
 #skill{
   display: block;
   width: 90%;

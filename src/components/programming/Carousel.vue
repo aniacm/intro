@@ -3,12 +3,11 @@
         <div class="switch left" @click='Switch(-1)'>&lt;</div>
         <div class="switch right" @click='Switch(1)'>&gt;</div>
         <div class="imgdiv" v-for='(link,index) in img_list'>
-            <img :src='link' v-if="index==target_index" height="600" width="950" alt="">
+            <img :src='link' v-if="index==target_index" alt="">
         </div>
         <div class="allbtn">
             <div class="btndiv" v-for='(link,index) in img_list'>
                 <button class="btn select_btn" :class="index==target_index?'current_btn':'select_btn'" @click='Select_Img(index)'></button>
-                <!-- <button class="btn current_btn" v-if="index==target_index"></button> -->
             </div>
         </div>
     </div>
@@ -18,7 +17,7 @@ export default {
     name: 'carousel',
     data() {
         return {
-            timer: window.setInterval(this.slide, 3000),
+            // timer: window.setInterval(this.slide, 3000),
             target_index: 0,
             img_list: [
                 require("../../assets/image/carousel/img001.png"),
@@ -68,15 +67,24 @@ export default {
     text-align: center;
     /*height: 600px;*/
     position: relative;
-    margin: 5% 0%;
+    /*margin: 5% 0%;*/
 }
 
-.imgdiv {}
+.imgdiv{
+    overflow: hidden;
+}
+
+.imgdiv>img {
+    /*去除div底部白边，或将img标签变为块级元素。*/
+    vertical-align: bottom;
+    width: 100%;
+    /*height: 100%;*/
+}
 
 .switch {
     padding: 5%;
-    color: #fff;
-    font-size: 3em;
+    color: #f0f0f0;
+    font-size: 2em;
     cursor: pointer;
 }
 
@@ -95,8 +103,8 @@ export default {
 .allbtn {
     position: absolute;
     right: 5%;
-    bottom: 0px;
-    padding: 2%;
+    bottom: 5%;
+    /*padding: 2%;*/
     z-index: 999;
 }
 

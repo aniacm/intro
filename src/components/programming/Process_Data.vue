@@ -96,6 +96,9 @@ export default {
 }
 </script>
 <style scoped>
+#process_data{
+    padding-left: 5%; 
+}
 .process {
     margin: 5% 0%;
 }

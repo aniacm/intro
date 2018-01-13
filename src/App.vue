@@ -54,10 +54,12 @@ export default {
 </script>
 
 <style>
+
 *{
   margin: 0px;
   padding: 0px;
 }
+
 body{
   background-color: #0C1624;
   /*background-image: url(./assets/image/bg_01_small.png);*/

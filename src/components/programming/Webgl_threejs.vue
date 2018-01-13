@@ -112,11 +112,12 @@ export default {
 
 }
 </script>
-<style scoped>
+<style>
 #webgl{
-	margin: 5% 0%;
+	/*margin: 5% 0%;*/
 }
 canvas{
+    vertical-align: bottom;
 	width: 100%;
 	height: 100%;
 }

@@ -43,11 +43,11 @@ export default{
 	mounted(){
 		this.$nextTick(function(){
         //对DOM的操作放在这
-        	console.log('nextTick:');
+        	// console.log('nextTick:');
            	let bodyHeight=(document.body.clientHeight>200)?document.body.clientHeight:310;
         	let mt=(window.innerHeight-bodyHeight-document.getElementById('introduce').clientHeight)/2;
-        	console.log(window.innerHeight,bodyHeight,document.getElementById('introduce').clientHeight);
-        	console.log(mt);
+        	// console.log(window.innerHeight,bodyHeight,document.getElementById('introduce').clientHeight);
+        	// console.log(mt);
         	document.getElementById('headimg').style.marginTop=mt+'px';
     	})
 	}
