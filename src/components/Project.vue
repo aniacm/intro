@@ -1,6 +1,6 @@
 <template>
     <div id="project">
-        <h3>{{ $t('message.prog') }}</h3>
+        <h3><i class="fa fa-code"></i> {{ $t('message.prog') }}</h3>
         
         <div class="programming">
             <div class="pro" v-for='list in Programming_List'>
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <h3>{{ $t('message.pai') }}</h3>
+        <h3><i class="fa fa-paint-brush"></i> {{ $t('message.pai') }}</h3>
         <div class="painting">
             <div class="pai" v-for='(list,index) in Painting_List'>
                 <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="" @click='ShowImg(index)'>
