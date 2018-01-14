@@ -5,7 +5,7 @@
         <div class="programming">
             <div class="pro" v-for='list in Programming_List'>
                 <div class="linkdiv" :class="(list.component==Content)?'linkdiv_selected':''" @click='Display(list.component)'>
-                    <span>&lt; /&gt; {{ $t(list.name) }}</span><i class="fa fa-angle-down fa-lg"></i>
+                    <span>{{ $t(list.name) }}</span><i class="fa fa-angle-down fa-lg"></i>
                 </div>
                 <collapse_transition>
                     <component v-bind:is="Content" v-if="list.component==Content" :style="list.border"></component>
@@ -16,11 +16,10 @@
 
         <h3>{{ $t('message.pai') }}</h3>
         <div class="painting">
-            <div class="pai" v-for='list in Painting_List'>
-                <router-link :to='list.link'>
-                    <!-- {{list.name}} -->
-                    <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="">
-                </router-link>
+            <div class="pai" v-for='(list,index) in Painting_List'>
+                <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="" @click='ShowImg(index)'>
+                <div class="img_mask" v-if="index==showimg" @click='HideImg()'></div>
+                <img class="img_display" :src="list.imgsrc_big" alt="" v-if="index==showimg" @click='HideImg()'>
             </div>
         </div>
     </div>
@@ -38,22 +37,23 @@ export default {
     data() {
         return {
             Content: Process_Data,
+            showimg: -1,
             Painting_List: [{
                     name: '虞姬',
                     link: '/project/painting/yuji',
                     imgsrc: require('../assets/image/20160125_small.jpg'),
-                    component: Yuji
+                    imgsrc_big: require('../assets/image/20160125.jpg')
                         // imgsrc:require('../assets/image/p1.png')
                 }, {
                     name: 'Q版人物',
                     link: '/project/painting/choroq',
                     imgsrc: require('../assets/image/20160128_small.jpg'),
-                    component: ChoroQ
+                    imgsrc_big: require('../assets/image/20160128.jpg')
                 }, {
                     name: '油画',
                     link: '/project/painting/oilpainting',
                     imgsrc: require('../assets/image/oilpainting_small.jpg'),
-                    component: OilPainting
+                    imgsrc_big: require('../assets/image/oilpainting.jpg')
                 }
 
             ],
@@ -81,6 +81,12 @@ export default {
     methods:{
         Display(name){
             this.Content=(this.Content!=name)?name:'';
+        },
+        ShowImg(index){
+            this.showimg=index;
+        },
+        HideImg(){
+            this.showimg=-1;
         }
     },
     components: {
@@ -165,6 +171,28 @@ a {
 .linkimg:hover {
     opacity: 0.8;
     filter: alpha(opacity=80);
+}
+
+.img_mask{
+    background-color: #000;
+    opacity: 0.8;
+    position: fixed;
+    z-index: 999;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.img_display{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    max-height: 100%;
+    z-index: 999;
 }
 
 .linkdiv {
