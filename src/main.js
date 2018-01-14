@@ -5,7 +5,8 @@ import App from './App'
 import router from './router'
 import VueI18n from 'vue-i18n'
 import messages from './language/index'
-import 'font-awesome/css/font-awesome.css'
+// import 'font-awesome/css/font-awesome.css'
+import './assets/css/font/iconfont.css'
 
 Vue.use(VueI18n)
 Vue.config.productionTip = false

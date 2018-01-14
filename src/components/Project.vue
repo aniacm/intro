@@ -1,11 +1,11 @@
 <template>
     <div id="project">
-        <h3><i class="fa fa-code"></i> {{ $t('message.prog') }}</h3>
+        <h3><i class="iconfont icon-code"></i> {{ $t('message.prog') }}</h3>
         
         <div class="programming">
             <div class="pro" v-for='list in Programming_List'>
                 <div class="linkdiv" :class="(list.component==Content)?'linkdiv_selected':''" @click='Display(list.component)'>
-                    <span>{{ $t(list.name) }}</span><i class="fa fa-angle-down fa-lg"></i>
+                    <span>{{ $t(list.name) }}</span><i class="iconfont icon-less"></i>
                 </div>
                 <collapse_transition>
                     <component v-bind:is="Content" v-if="list.component==Content" :style="list.border"></component>
@@ -14,12 +14,20 @@
             </div>
         </div>
 
-        <h3><i class="fa fa-paint-brush"></i> {{ $t('message.pai') }}</h3>
+        <h3><i class="iconfont icon-color"></i> {{ $t('message.pai') }}</h3>
         <div class="painting">
             <div class="pai" v-for='(list,index) in Painting_List'>
-                <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="" @click='ShowImg(index)'>
-                <div class="img_mask" v-if="index==showimg" @click='HideImg()'></div>
-                <img class="img_display" :src="list.imgsrc_big" alt="" v-if="index==showimg" @click='HideImg()'>
+                <div class="img_small">
+                    <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="" @click='ShowImg(index)'>
+                </div>
+                <div class="img_big" v-if="index==showimg">
+                    <div class="img_mask"></div>
+                    <img class="img_display" :src="list.imgsrc_big" alt="">
+                    <i class="icon iconfont icon-close" @click='HideImg()'></i>
+                    <i class="icon iconfont icon-back" v-if="index!=0" @click='Move(-1)'></i>
+                    <i class="icon iconfont icon-more" v-if="index!=Painting_List.length-1" @click='Move(1)'></i>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -87,6 +95,9 @@ export default {
         },
         HideImg(){
             this.showimg=-1;
+        },
+        Move(n){
+            this.showimg+=n;
         }
     },
     components: {
@@ -137,7 +148,7 @@ a {
 .programming{
     background-color: #eee;
     /*border:1px solid #323144;*/
-    border-radius: 10px;
+    border-radius: 1em;
     overflow: hidden;
 }
 
@@ -149,12 +160,12 @@ a {
 
 
 .pai {
-    overflow: hidden;
     display: inline-block;
-    vertical-align: top;
+    
     /*text-align: center;*/
     transition: 0.3s;
-    background-color: #000;
+    /*background-color: #000;*/
+    /*border-radius: 1em;*/
     height: 200px;
 }
 
@@ -163,9 +174,22 @@ a {
     width: 100%;
 }
 
+.img_small{
+
+    background-color: #000;
+    border-radius: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    /*padding: 1em;*/
+    
+}
+
 .linkimg {
+    vertical-align: bottom;
     box-shadow: #bbb 0px 0px 10px;
-    z-index: 999;
+    cursor: pointer;
+    border-radius: 1em;
+    /*border: 1px solid #eee;*/
 }
 
 .linkimg:hover {
@@ -173,15 +197,57 @@ a {
     filter: alpha(opacity=80);
 }
 
+
+.img_big{
+    
+}
+
 .img_mask{
     background-color: #000;
-    opacity: 0.8;
+    opacity: 0.9;
     position: fixed;
     z-index: 999;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
+}
+
+i.icon-back,i.icon-more,i.icon-close{
+    position: fixed;
+    z-index: 999;
+    color: #eee;
+    font-size: 5em;
+    cursor: pointer;
+}
+
+i.icon-back:active,i.icon-more:active,i.icon-close:active{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+i.icon-back,i.icon-more{
+    top: 50%;
+    margin-top: -0.5em;
+}
+
+i.icon-back{
+    left: 5%;
+}
+
+i.icon-more,i.icon-close{
+
+    right: 5%;
+}
+
+i.icon-close{
+    font-size: 4em;
+    font-weight: 900;
+    top: 5%;
+}
+
+i.icon-close:hover{
+    color: #D3394F;
 }
 
 .img_display{
@@ -192,6 +258,7 @@ a {
     bottom: 0px;
     margin: auto;
     max-height: 100%;
+    max-width: 100%;
     z-index: 999;
 }
 
@@ -215,12 +282,13 @@ a {
 
 }
 
-.linkdiv i.fa-angle-down{
+.linkdiv i.icon-less{
     right: 1em;
-    top: 20px;
+    /*top: 20px;*/
     /*left: auto;*/
     position: absolute;
     /*text-align: right;*/
+    transition: all 0.25s ease;
 }
 
 .linkdiv_selected{
@@ -228,8 +296,8 @@ a {
     border-bottom: 1px solid #D3394F;
 }
 
-.linkdiv_selected i.fa-angle-down{
-    transition: all 0.25s ease;
+.linkdiv_selected i.icon-less{
+    
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);

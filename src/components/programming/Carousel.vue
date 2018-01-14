@@ -82,22 +82,23 @@ export default {
 }
 
 .switch {
-    padding: 5%;
+    /*padding: 5%;*/
     color: #f0f0f0;
-    font-size: 2em;
+    font-size: 5em;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5em;
 }
 
 .left {
-    position: absolute;
-    left: 0px;
-    top: 35%;
+    
+    left: 5%;
 }
 
 .right {
-    position: absolute;
-    right: 0px;
-    top: 35%;
+    
+    right: 5%;
 }
 
 .allbtn {

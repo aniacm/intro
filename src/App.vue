@@ -5,7 +5,7 @@
         YETING BAO
       </div>
       <div class="right">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjIyQkFFNjc1Q0Y3MTFFMkI1NEFBNkJFQ0MyNkQ2RkYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjIyQkFFNjg1Q0Y3MTFFMkI1NEFBNkJFQ0MyNkQ2RkYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGMjJCQUU2NTVDRjcxMUUyQjU0QUE2QkVDQzI2RDZGRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGMjJCQUU2NjVDRjcxMUUyQjU0QUE2QkVDQzI2RDZGRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pvb/uPAAAAAmSURBVHjaYmRgYPBlIBGwiIuLk6qHgfH///+DWdNoQNA7IAACDABm7hO6FUUnoQAAAABJRU5ErkJggg==" alt="">
+        <i class="icon iconfont icon-category"></i>
         <router-link to="/about">{{ $t('message.ps') }}</router-link>
         <router-link to="/skill">{{ $t('message.ski') }}</router-link>
         <router-link to="/experience">{{ $t('message.exp') }}</router-link>
@@ -119,7 +119,7 @@ a{
   text-decoration: underline;
 }
 
-#title>.right>img{
+#title>.right>i.icon-category{
   margin: 0 60px;
   display: none;
   cursor: pointer;
@@ -168,7 +168,7 @@ body{
 
 }
 
-#title>.right>img{
+#title>.right>i.icon-category{
   display: inline-block;
   /*padding: 0 20px;*/
 }
