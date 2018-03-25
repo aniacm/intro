@@ -62,7 +62,7 @@ export default {
 
 body{
   background-color: #0C1624;
-  /*background-image: url(./assets/image/bg_01_small.png);*/
+  background-image: none;
   background-repeat: no-repeat;
   background-attachment:fixed;
   background-size: cover;

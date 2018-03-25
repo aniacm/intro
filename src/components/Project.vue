@@ -48,18 +48,18 @@ export default {
             showimg: -1,
             Painting_List: [{
                     name: '虞姬',
-                    link: '/project/painting/yuji',
+                    // link: '/project/painting/yuji',
                     imgsrc: require('../assets/image/20160125_small.jpg'),
                     imgsrc_big: require('../assets/image/20160125.jpg')
                         // imgsrc:require('../assets/image/p1.png')
                 }, {
                     name: 'Q版人物',
-                    link: '/project/painting/choroq',
+                    // link: '/project/painting/choroq',
                     imgsrc: require('../assets/image/20160128_small.jpg'),
                     imgsrc_big: require('../assets/image/20160128.jpg')
                 }, {
                     name: '油画',
-                    link: '/project/painting/oilpainting',
+                    // link: '/project/painting/oilpainting',
                     imgsrc: require('../assets/image/oilpainting_small.jpg'),
                     imgsrc_big: require('../assets/image/oilpainting.jpg')
                 }
@@ -67,19 +67,19 @@ export default {
             ],
             Programming_List: [{
                 name: 'message.ProcessData',
-                link: '/project/programming/process_data',
+                // link: '/project/programming/process_data',
                 // bgcolor: 'background-color:#323144',//074080
                 // border: 'border-top: 1px solid #7E7BB1',
                 component: Process_Data
             }, {
                 name: 'message.carousel',
-                link: '/project/programming/carousel',
+                // link: '/project/programming/carousel',
                 // bgcolor: 'background-color:#323144',
                 // border: 'border-top: 1px solid #7E7BB1',
                 component: Carousel
             }, {
                 name: 'message.webgl',
-                link: '/project/programming/webgl',
+                // link: '/project/programming/webgl',
                 // bgcolor: 'background-color:#323144',
                 // border: 'border-top: 1px solid #7E7BB1',
                 component: WebGL
