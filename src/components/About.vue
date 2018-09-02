@@ -1,15 +1,17 @@
 <template>
 	<div id='about'>
 		<div id='headimg'>
-			<img src="../assets/image/photo.jpg" height="300" width="300">
+			<div id="name">YETING BAO</div>
+			<!-- <img src="../assets/image/photo.jpg" height="300" width="300"> -->
 		</div>
 
 		<div id="introduce">
 
 			<div class="left">
 			<!-- {{ $t('message.') }} -->
-				{{ $t('message.nam') }}
-				<br>
+			
+				<!-- {{ $t('message.nam') }} -->
+				<!-- <br> -->
 				{{ $t('message.loc') }}
 				<br>
 				<a class="icon" href="https://github.com/aniacm">
@@ -51,7 +53,8 @@ export default{
         	document.getElementById('headimg').style.marginTop=mt+'px';
     	})
 	}
-}
+};
+
 </script>
 
 <style>
@@ -68,6 +71,14 @@ export default{
 	border-radius: 50%;
 	margin: auto;
 	/*margin-top: 8%; */
+}
+
+#headimg>#name{
+	margin:auto;
+	margin-top:10% ;
+	text-align: center;
+	color: #fff;
+	font-size: 5em;
 }
 
 #introduce{

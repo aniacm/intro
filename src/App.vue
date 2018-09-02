@@ -50,7 +50,7 @@ export default {
     //   // console.log(document.body.backgroundImage)
     // }
   }
-}
+};
 </script>
 
 <style>
