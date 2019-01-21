@@ -1,7 +1,5 @@
 # my-portfolio
 
-> portfolio in vue
-view at https://aniacm.github.io/portfolio-in-vue/
 
 ## Build Setup
 
