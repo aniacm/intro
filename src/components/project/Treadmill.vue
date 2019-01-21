@@ -3,10 +3,11 @@
 		<router-link to='/'>
 			<h3>&lt; {{ $t('message.back') }}</h3>
         </router-link>
+        <img id="treadmill_photo" src="../../assets/image/Treadmill2.png" height="454" width="1224" alt="">
         <h2>Treadmill</h2>
         <h3>Overview</h3>
-        	<p>We would like to improve the user experience of common treadmill. By observation and interview, we collected data and found goal of participants. The problem and design storyboard were created.</p>
-        	<p>Team member: Linyun Zhu, Qiwen Zhao, Vaishnavi Mande, Yeting Bao</p>
+        	<p>Our purpose is to improve the user experience of common treadmill. By observation and interview, we collected data and found goal of participants. The problem and design storyboard were created.</p>
+        	<p>Team member: Linyun Zhu, Qiwen Zhao, Vaishnavi Mande and Yeting Bao</p>
         <h3>Personas</h3>
         	<img id="per1" src="../../assets/image/Persona/Persona1.jpg" height="1002" width="1600" alt="">
         	<img id="per2" src="../../assets/image/Persona/Persona2.jpg" height="1002" width="1600" alt="">
@@ -35,7 +36,7 @@
 	margin: 2% 0%;
 }
 
-#per1, #per2, #per3, #per4, #pro1, #pro2, #des1, #des2{
+#treadmill_photo, #per1, #per2, #per3, #per4, #pro1, #pro2, #des1, #des2{
 	max-width: 100%;
 	height: auto;
 }

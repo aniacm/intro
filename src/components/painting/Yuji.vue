@@ -1,6 +1,6 @@
 <template>
 	<div id="yuji">
-		<img src="../../assets/image/20160125.jpg" alt="">
+		<!-- <img src="../../assets/image/20160125.jpg" alt=""> -->
 	</div>
 </template>
 

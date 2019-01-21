@@ -132,6 +132,10 @@ a{
   cursor: pointer;
 }
 
+h3{
+  color: #18B56A;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -172,14 +176,14 @@ a{
 
 #title>.left{
   text-align: left;
-  margin-left: 10%;
+  margin-left: 15%;
   
   /*float: left;*/
 }
 
 #title>.right{
   position: absolute;
-  right: 10%;
+  right: 15%;
   overflow: hidden;
 }
 
@@ -229,11 +233,12 @@ a{
 
 #changeL>.selected{
   text-decoration: underline;
+  color: #18B56A;
 }
 
 #changeL:hover{
-  background-color: rgba(255,255,255,0.5);
-  color: #000;
+  background-color: rgba(255,255,255,0.2);
+  /*color: #000;*/
   transition: all .3s ease;
 }
 

@@ -1,8 +1,8 @@
 <template>
 	<div id='about'>
 		<div id='abstract'>
-			<img src="../assets/image/photo.jpg" height="300" width="">
-			<div id="quote">“Hi. <p>I am Yeting Bao.</p><p id="major">First-year graduate student in HCI program.</p>”</div>
+			<img id="avatar" src="../assets/image/photo.jpg" height="1408" width="1398">
+			<div id="quote">“Hi, <p>I am <span id='ab_name'>Yeting Bao</span>.</p><p id="major">First-year graduate student in HCI program.</p>”</div>
 		</div>
 
 		<div id="introduce">
@@ -12,15 +12,9 @@
 			
 				<!-- {{ $t('message.nam') }} -->
 				<!-- <br> -->
+				◉
 				{{ $t('message.loc') }}
-				<br>
-				<a class="icon" href="https://github.com/aniacm">
-					<img src="../assets/image/GitHub-Mark-32px.png" height="32" width="32" alt="">
-				</a>
-
-				<a class="icon" href="mailto:blythebao@foxmail.com">
-					<img src="../assets/image/email_32px.png" height="32" width="32" alt="">
-				</a>
+				
 				
 			</div>
 			<div class="right">
@@ -65,21 +59,16 @@ export default{
 	
 #abstract{
 	padding: 5% 15%;
-
 	/*background-color: #eee;*/
-	display: flex;
+	/*display: flex;*/
 }
 
-
-#abstract>img{
-	padding-right: 5%;
-	/*background-color: #000;*/
-	/*position: absolute;*/
-	/*max-width: 50%;*/
-	/*max-height: ;*/
-	/*border-radius: 50%;*/
-	/*margin: auto;*/
-	/*margin-top: 8%; */
+#abstract>img#avatar{
+	float: left;
+	margin-right: 5%;
+	max-width: 25%;
+	height: auto;
+	border-radius: 50%;
 }
 
 #abstract>#quote{
@@ -92,6 +81,10 @@ export default{
 
 #abstract>#quote>#major{
 	font-size: 0.5em;
+}
+
+#abstract>#quote>p>span#ab_name{
+	color: #18B56A;
 }
 
 #introduce{
@@ -129,10 +122,8 @@ export default{
 }
 
 @media screen and (max-width: 800px) {  
-#abstract>img{
-	max-width: 15em;
-	max-height: 15em;
-	/*margin-top:5%;*/
+#abstract>img#avatar{
+	max-width: 50%;
 }
 
 #abstract>#quote{

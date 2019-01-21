@@ -69,6 +69,10 @@
     margin-bottom: 5%;
 }
 
+#experience>h3{
+    padding-bottom: 1em;
+}
+
 .left {
     /*flex: 1;*/
 }

@@ -6,7 +6,10 @@
         <div class="project">
             <div class="proj" v-for='(list,index) in Project_List'>
                 <div class="img_small" @click="Goto(list.resource,list.link)">
-                    <div class="describe">{{list.name}}</div>
+                    <div class="describe">
+                        <p id="p_name">{{list.name}}<p>
+                        <p id="p_detail">{{list.detail}}</p>
+                    </div>
                     <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="Projects">
                 </div>
             </div>
@@ -30,11 +33,13 @@ export default {
             showimg: -1,
             Project_List:[{
                     name: 'RecoverRochester',
+                    detail: 'Food recovery app',
                     resource: 'outside',
                     link: 'https://sites.google.com/g.rit.edu/hci-ritfoodrecovery/home',
-                    imgsrc: require('../assets/image/RR.jpeg')
+                    imgsrc: require('../assets/image/RRlogo.png')
                 },{
                     name: 'Treadmill',
+                    detail: 'Interactive screen',
                     resource: 'inside',
                     link: '/project/treadmill',
                     imgsrc: require('../assets/image/Treadmill.png'),
@@ -87,7 +92,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #project {
-    padding: 5% 15%;
+    padding: 0% 15%;
     text-align: left;
     background-color: #fff;
     transition: 0.3s;
@@ -107,12 +112,6 @@ a {
     border-radius: 0px;
     /*background-color: #FFF;*/
     color: #000;
-}
-
-.programming,
-.painting,
-.project{
-    margin: 5% 0;
 }
 
 .programming{
@@ -148,8 +147,8 @@ div.img_small{
 
     background-color: #000;
     /*border-radius: 1em;*/
-    /*margin-right: 1em;*/
-    /*margin-bottom: 1em;*/
+    margin-right: 1em;
+    margin-top: 1em;
     /*padding: 1em;*/
     
 }
@@ -159,18 +158,20 @@ div.img_small>.describe{
     width: 200px;
     height: 200px;
     text-align: center;
-    line-height: 200px;
+    /*line-height: 200px;*/
     opacity: 0;
+}
+
+div.img_small>.describe>p#p_name{
+    margin-top: 80px;
+    font-size: 1.2em;
 }
 
 div.img_small>.describe:hover{
     background-color: rgba(0,0,0,0.5);
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    text-align: center;
+
     font-weight: bold;
-    line-height: 200px;
+    /*line-height: 200px;*/
     opacity: 1;
     color: #fff;
     cursor: pointer;

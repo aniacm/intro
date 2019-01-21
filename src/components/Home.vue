@@ -3,6 +3,15 @@
 		<About></About>
 		<Project></Project>
 		<Experience></Experience>
+		<div id="foot">
+			<a class="icon" href="https://github.com/aniacm">
+				<img src="../assets/image/GitHub-Mark-32px.png" height="32" width="32" alt="">
+			</a>
+			<a class="icon" href="mailto:blythebao@foxmail.com">
+				<img src="../assets/image/email_32px.png" height="32" width="32" alt="">
+			</a>
+		</div>
+		
 	</div>
 </template>
 <script>
@@ -32,4 +41,27 @@ name:'home',
 };
 </script>
 <!-- <style scoped></style> -->
-<style></style>
+<style>
+#home>#foot{
+	background: #fff;
+	padding-bottom: 5%;
+}
+
+#foot>a{
+	padding: 0 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>

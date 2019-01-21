@@ -7,8 +7,8 @@ const messagesEn = {
   pro: 'Projects',
 
   nam: 'Name: YeTing Bao',
-  loc: 'Location: Rochester, NY',
-  int: 'I am from China. My hometown Shanghai is a beautiful city with lovely people. My future career goal is to be a web developer or UX engineer. The books I am reading: 1. The Design of Everyday Things--Don Norman; 2.Don’t Make Me Think--Steve Krug',
+  loc: 'Rochester, NY',
+  int: 'I am from Shanghai, China, which is a beautiful city with lovely people. My future career goal is to be a web developer or UX engineer. The books I recommend for UX learning: 1. The Design of Everyday Things--Don Norman; 2.Don’t Make Me Think--Steve Krug',
   web: 'website',
 
   ski1:'1. HTML, CSS, Javascript, C and JAVA programming skills.',

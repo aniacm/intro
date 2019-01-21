@@ -7,7 +7,7 @@ const messagesCn = {
   pro: '项目经验',
 
   nam: '姓名: 包烨婷',
-  loc: '所在地: Rochester, NY',
+  loc: 'Rochester, NY',
   int: '前端开发者, 致力于学习不同文化与技能, 未来职业或成为用户体验工程师或者继续开发网站。推荐几本UX基础读物, 唐纳德·A·诺曼的《设计心理学》, Steve Krug的《Don’t Make Me Think》',
   web: '个人学习博客',
 
@@ -41,6 +41,10 @@ const messagesCn = {
   e1_name: '上海海洋大学 - 本科 - 计算机科学与技术',
   e1_during: '09/2013-07/2017',
 
+  e2_name: 'Rochester Institue of Technology - Master of Science - Human Computer Interaction',
+  e2_during: '08/2018 - 05/2020',
+
+
   pai: '手绘项目',
   prog: '编程项目',
 
@@ -57,7 +61,10 @@ const messagesCn = {
 
   carousel: '轮播图',
 
-  webgl: 'WebGL'
+  webgl: 'WebGL',
+
+  project: 'UX项目'
+
 }
 
 export default messagesCn
