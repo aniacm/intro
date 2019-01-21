@@ -16,14 +16,14 @@
 	var bg_small = new Image();
 	bg_small.src = './static/bg_01_small.png';
 	bg_small.onload = () =>{
-		console.log("初始背景加载成功");
+		console.log("Initial background loaded.");
 		this.document.body.style.backgroundImage = "url("+bg_small.src+")";
 	}
 
 	var bg_big = new Image();
 	bg_big.src = './static/bg_01.png';
 	bg_big.onload = () => { // 图片加载成功后更换背景地址
-	  console.log("高清背景加载成功");
+	  console.log("High quality background loaded.");
 	  // setTimeout("",5000)
 	  this.document.body.style.backgroundImage = "url("+bg_big.src+")";
 	  // console.log(this.document.body.style)

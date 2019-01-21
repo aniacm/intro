@@ -1,35 +1,17 @@
 <template>
     <div id="project">
-        <h3><i class="iconfont icon-code"></i> {{ $t('message.prog') }}</h3>
-        
-        <div class="programming">
-            <div class="pro" v-for='list in Programming_List'>
-                <div class="linkdiv" :class="(list.component==Content)?'linkdiv_selected':''" @click='Display(list.component)'>
-                    <span>{{ $t(list.name) }}</span><i class="iconfont icon-less"></i>
+        <h3>{{ $t('message.project') }}</h3>
+
+
+        <div class="project">
+            <div class="proj" v-for='(list,index) in Project_List'>
+                <div class="img_small" @click="Goto(list.resource,list.link)">
+                    <div class="describe">{{list.name}}</div>
+                    <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="Projects">
                 </div>
-                <collapse_transition>
-                    <component v-bind:is="Content" v-if="list.component==Content" :style="list.border"></component>
-                </collapse_transition>
-                
             </div>
         </div>
 
-        <h3><i class="iconfont icon-color"></i> {{ $t('message.pai') }}</h3>
-        <div class="painting">
-            <div class="pai" v-for='(list,index) in Painting_List'>
-                <div class="img_small">
-                    <img class="linkimg" v-if="list.imgsrc" :src="list.imgsrc" height="200" width="200" alt="" @click='ShowImg(index)'>
-                </div>
-                <div class="img_big" v-if="index==showimg">
-                    <div class="img_mask"></div>
-                    <img class="img_display" :src="list.imgsrc_big" alt="">
-                    <i class="icon iconfont icon-close" @click='HideImg()'></i>
-                    <i class="icon iconfont icon-back" v-if="index!=0" @click='Move(-1)'></i>
-                    <i class="icon iconfont icon-more" v-if="index!=Painting_List.length-1" @click='Move(1)'></i>
-                </div>
-                
-            </div>
-        </div>
     </div>
 </template>
 <script>
@@ -46,44 +28,25 @@ export default {
         return {
             Content: Process_Data,
             showimg: -1,
-            Painting_List: [{
-                    name: '虞姬',
-                    // link: '/project/painting/yuji',
-                    imgsrc: require('../assets/image/20160125_small.jpg'),
-                    imgsrc_big: require('../assets/image/20160125.jpg')
-                        // imgsrc:require('../assets/image/p1.png')
-                }, {
-                    name: 'Q版人物',
-                    // link: '/project/painting/choroq',
-                    imgsrc: require('../assets/image/20160128_small.jpg'),
-                    imgsrc_big: require('../assets/image/20160128.jpg')
-                }, {
-                    name: '油画',
-                    // link: '/project/painting/oilpainting',
-                    imgsrc: require('../assets/image/oilpainting_small.jpg'),
-                    imgsrc_big: require('../assets/image/oilpainting.jpg')
+            Project_List:[{
+                    name: 'RecoverRochester',
+                    resource: 'outside',
+                    link: 'https://sites.google.com/g.rit.edu/hci-ritfoodrecovery/home',
+                    imgsrc: require('../assets/image/RR.jpeg')
+                },{
+                    name: 'Treadmill',
+                    resource: 'inside',
+                    link: '/project/treadmill',
+                    imgsrc: require('../assets/image/Treadmill.png'),
+                    // imgsrc_big: require('')
+                // }, {
+                //     name: '油画',
+                //     // link: '/project/painting/oilpainting',
+                //     imgsrc: require(''),
+                //     imgsrc_big: require('')
                 }
 
-            ],
-            Programming_List: [{
-                name: 'message.ProcessData',
-                // link: '/project/programming/process_data',
-                // bgcolor: 'background-color:#323144',//074080
-                // border: 'border-top: 1px solid #7E7BB1',
-                component: Process_Data
-            }, {
-                name: 'message.carousel',
-                // link: '/project/programming/carousel',
-                // bgcolor: 'background-color:#323144',
-                // border: 'border-top: 1px solid #7E7BB1',
-                component: Carousel
-            }, {
-                name: 'message.webgl',
-                // link: '/project/programming/webgl',
-                // bgcolor: 'background-color:#323144',
-                // border: 'border-top: 1px solid #7E7BB1',
-                component: WebGL
-            }]
+            ]
         }
     },
     methods:{
@@ -98,6 +61,15 @@ export default {
         },
         Move(n){
             this.showimg+=n;
+        },
+        Goto(resource,linkname){
+            //判断resource是外部链接还是内部组件
+            if(resource=='outside'){
+                window.open(linkname);
+            }else if(resource=='inside'){
+                this.$router.push(linkname);
+            }
+            
         }
     },
     components: {
@@ -115,12 +87,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #project {
-    width: 70%;
-    /*max-width: 900px;*/
-    /*height: 90%;*/
-    position: absolute;
-    margin: 0% 10%;
-    padding: 5%;
+    padding: 5% 15%;
     text-align: left;
     background-color: #fff;
     transition: 0.3s;
@@ -142,7 +109,9 @@ a {
     color: #000;
 }
 
-.programming,.painting{
+.programming,
+.painting,
+.project{
     margin: 5% 0;
 }
 
@@ -160,7 +129,7 @@ a {
 }
 
 
-.pai {
+.pai, .proj {
     display: inline-block;
     
     /*text-align: center;*/
@@ -175,28 +144,51 @@ a {
     width: 100%;
 }
 
-.img_small{
+div.img_small{
 
     background-color: #000;
-    border-radius: 1em;
-    margin-right: 1em;
-    margin-bottom: 1em;
+    /*border-radius: 1em;*/
+    /*margin-right: 1em;*/
+    /*margin-bottom: 1em;*/
     /*padding: 1em;*/
     
 }
 
-.linkimg {
+div.img_small>.describe{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    opacity: 0;
+}
+
+div.img_small>.describe:hover{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 200px;
+    opacity: 1;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+img.linkimg {
     vertical-align: bottom;
     box-shadow: #bbb 0px 0px 10px;
-    cursor: pointer;
-    border-radius: 1em;
+    /*cursor: pointer;*/
+    /*border-radius: 1em;*/
     /*border: 1px solid #eee;*/
 }
 
-.linkimg:hover {
+/*img.linkimg:hover {
     opacity: 0.8;
     filter: alpha(opacity=80);
-}
+}*/
 
 
 .img_big{

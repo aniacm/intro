@@ -28,8 +28,9 @@ export default{
   methods:{
 
   }
-}
+};
 </script>
+
 <style>
 #project_detail {
     width: 70%;

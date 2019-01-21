@@ -7,8 +7,8 @@ const messagesCn = {
   pro: '项目经验',
 
   nam: '姓名: 包烨婷',
-  loc: '所在地: 上海',
-  int: '前端开发者, 致力于学习不同文化与技能, 未来职业或成为UX Designer/软件开发者。推荐几本UX基础读物, 唐纳德·A·诺曼的《设计心理学》, Steve Krug的《Don’t Make Me Think》',
+  loc: '所在地: Rochester, NY',
+  int: '前端开发者, 致力于学习不同文化与技能, 未来职业或成为用户体验工程师或者继续开发网站。推荐几本UX基础读物, 唐纳德·A·诺曼的《设计心理学》, Steve Krug的《Don’t Make Me Think》',
   web: '个人学习博客',
 
   ski1:'1. 掌握 HTML, CSS, Javascript, C 和 JAVA 编程技能。',
@@ -38,8 +38,8 @@ const messagesCn = {
   c2_details_03: '- 通过原生js、vue-cli或微信开发者工具来开发网页, 包括了搜索、筛选、请求和排序数据的功能。',
 
   education: '教育经历',
-  e_name: '上海海洋大学 - 本科 - 计算机科学与技术',
-  e_during: '09/2013-07/2017',
+  e1_name: '上海海洋大学 - 本科 - 计算机科学与技术',
+  e1_during: '09/2013-07/2017',
 
   pai: '手绘项目',
   prog: '编程项目',
