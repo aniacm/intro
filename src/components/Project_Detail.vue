@@ -31,7 +31,7 @@ export default{
 };
 </script>
 
-<style>
+<style scoped>
 #project_detail {
     width: 70%;
     /*max-width: 900px;*/
@@ -55,11 +55,11 @@ export default{
     font-size:1.2em;
 }
 
-img {
+/*img {
     display: inline-block;
     height: auto;
     max-width: 100%;
-}
+}*/
 
 @media screen and (max-width: 800px) {  
 #project_detail {
